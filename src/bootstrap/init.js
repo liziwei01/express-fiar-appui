@@ -2,21 +2,31 @@
  * @Author: liziwei01
  * @Date: 2022-09-19 23:51:51
  * @LastEditors: liziwei01
- * @LastEditTime: 2022-09-20 00:59:50
+ * @LastEditTime: 2022-09-20 06:07:13
  * @Description: file content
  */
 import express from "express"
+import bodyParser from "body-parser"
+// import * as redis from "../library/redis/redis.js"
 
 function InitMust() {
 	// TODO
-	// 日志.
-	// initLoggers(ctx)
+	// initLoggers()
+	// initRedis()
 }
 
-// InitRouter 获取web路由.
+// TODO
+// function initRedis() {
+	// redis.Init()
+// }
+
+// InitRouter
 function InitRouter() {
-	// TODO Middleware
 	var handler = express()
+
+	// set basic middlewares
+	handler.use(bodyParser.urlencoded({extended:true}))
+	handler.use(bodyParser.json())
 
 	return handler
 }

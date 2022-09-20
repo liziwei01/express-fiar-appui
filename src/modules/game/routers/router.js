@@ -2,13 +2,13 @@
  * @Author: liziwei01
  * @Date: 2022-09-19 21:33:40
  * @LastEditors: liziwei01
- * @LastEditTime: 2022-09-20 01:12:42
+ * @LastEditTime: 2022-09-20 05:36:27
  * @Description: file content
  */
-import { LocalGame } from "../controllers/login.js"
+import { CheckWinner } from "../controllers/check_winner.js"
 
 function Init(router) {
-	router.get("/local-game", LocalGame)
+	router.post("/checkWinner", CheckWinner)
 }
 
 export { Init }
