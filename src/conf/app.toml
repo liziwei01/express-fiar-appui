@@ -1,0 +1,17 @@
+# app.toml: app main conf
+
+APPName = "node-fiar-appui"
+ 
+[HTTPServer]
+Listen="0.0.0.0:8080"
+
+# ms, optional
+ReadTimeout=1000
+
+# ms, optional
+# should be the longest acceptable time
+# middleware should not be longger
+WriteTimeout=40000 # 40s
+
+# ms, optional
+IdleTimeout=1000
