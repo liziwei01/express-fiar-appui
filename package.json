@@ -21,6 +21,7 @@
   "homepage": "https://github.com/liziwei01/express-fiar-appui#readme",
   "dependencies": {
     "connect-redis": "^6.1.3",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "node-fetch": "^3.2.10",
