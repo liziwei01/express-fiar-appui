@@ -2,7 +2,7 @@
  * @Author: liziwei01
  * @Date: 2022-09-20 05:08:46
  * @LastEditors: liziwei01
- * @LastEditTime: 2022-09-20 06:53:45
+ * @LastEditTime: 2022-09-20 09:30:52
  * @Description: file content
  */
 import session from "express-session"
@@ -31,6 +31,7 @@ function SessionMiddlewareFunc() {
 		resave: false,
 		saveUninitialized: true,
 		cookie: {
+			domain: "www.api-liziwei01-me.work",
 			maxAge: 1000 * 30 * 60, // ms
 			httpOnly: true,
 			secure: false
