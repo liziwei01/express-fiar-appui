@@ -7,6 +7,9 @@
  */
 import * as gameServices from "../services/check_winner.js"
 
+const blackChess = "Black"
+const whiteChess = "White"
+
 function CheckWinner(req, res) {
 	const chessX = req.query.chessX
 	const chessY = req.query.chessY
