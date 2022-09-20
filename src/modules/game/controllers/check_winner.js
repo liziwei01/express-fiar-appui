@@ -2,7 +2,7 @@
  * @Author: liziwei01
  * @Date: 2022-09-20 05:34:43
  * @LastEditors: liziwei01
- * @LastEditTime: 2022-09-20 07:32:39
+ * @LastEditTime: 2022-09-20 08:31:14
  * @Description: file content
  */
 import * as gameServices from "../services/check_winner.js"
@@ -14,7 +14,10 @@ function CheckWinner(req, res) {
 	const steps = req.body.steps
 	var board = req.session.chessBoard
 
-	// res.writeHeader(200, {"Access-Control-Allow-Origin": "*"})
+	if (chessX == undefined || chessY == undefined || chessColor == undefined || steps == undefined ) {
+		res.json(req.body)
+		return
+	}
 	
 	if (steps == 1) {
 		board = []
