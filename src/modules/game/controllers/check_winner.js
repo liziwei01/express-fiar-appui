@@ -2,7 +2,7 @@
  * @Author: liziwei01
  * @Date: 2022-09-20 05:34:43
  * @LastEditors: liziwei01
- * @LastEditTime: 2022-09-20 10:23:52
+ * @LastEditTime: 2022-09-20 10:36:14
  * @Description: file content
  */
 import * as gameServices from "../services/check_winner.js"
@@ -39,7 +39,7 @@ function CheckWinner(req, res) {
 		return
 	}
 
-	if (s_steps + 1 != steps) {
+	if (Int(s_steps)+1 != Int(steps)) {
 		req.session.destroy()
 		res.send("game stopped due to some malicious param")
 		return
@@ -76,5 +76,11 @@ function getChessColor(steps) {
 
 	return blackChess
 }
+
+function Int(x) {
+	const parsed = parseInt(x, 10);
+	if (isNaN(parsed)) { return 0; }
+	return parsed;
+  }
 
 export { CheckWinner }
