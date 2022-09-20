@@ -2,20 +2,20 @@
  * @Author: liziwei01
  * @Date: 2022-09-20 05:34:43
  * @LastEditors: liziwei01
- * @LastEditTime: 2022-09-20 08:31:14
+ * @LastEditTime: 2022-09-20 08:50:13
  * @Description: file content
  */
 import * as gameServices from "../services/check_winner.js"
 
 function CheckWinner(req, res) {
-	const chessX = req.body.chessX
-	const chessY = req.body.chessY
-	const chessColor = req.body.chessColor
-	const steps = req.body.steps
+	const chessX = req.query.chessX
+	const chessY = req.query.chessY
+	const chessColor = req.query.chessColor
+	const steps = req.query.steps
 	var board = req.session.chessBoard
 
 	if (chessX == undefined || chessY == undefined || chessColor == undefined || steps == undefined ) {
-		res.json(req.body)
+		res.json(req.query)
 		return
 	}
 	
