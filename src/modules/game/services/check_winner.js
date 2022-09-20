@@ -2,7 +2,7 @@
  * @Author: liziwei01
  * @Date: 2022-09-20 06:14:58
  * @LastEditors: liziwei01
- * @LastEditTime: 2022-09-20 06:58:00
+ * @LastEditTime: 2022-09-20 09:42:46
  * @Description: file content
  */
 function CheckWinner(chessX, chessY, chessColor, steps, board) {
@@ -27,7 +27,7 @@ function checkWinner(chessX, chessY, chessColor, board) {
 	var count = 1;
 
 	// horizontal
-    for(var column = chessX + 1; column < i + 5 && column <= 14; column++) {
+    for(var column = chessX + 1; column < chessX + 5 && column <= 14; column++) {
         if (board[column][chessY] && board[column][chessY] == chessColor) {
             count++;
         }else{
